@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=IBM+Plex+Sans:wght@600&family=Newsreader:ital,opsz,wght@1,6..72,600&family=Manrope:wght@500;800&family=Space+Grotesk:wght@500;700&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Sora:wght@400;700&family=Archivo:wdth,wght@100..125,500..900&display=swap');
+
+/* Gallery (/samples) and the Developers-page cards: site chrome around, each card in its
+   product's own colours and type so each reads as a different product. */
+.smpg { max-width: 1360px; margin: 0 auto; padding: 140px 32px 72px; display: flex; flex-direction: column; gap: 22px; box-sizing: border-box; }
+.smpg-h { margin: 0; font-family: 'Big Shoulders Display', sans-serif; font-weight: 900; font-size: clamp(64px, 11vw, 180px); line-height: 0.9; text-transform: uppercase; }
+.smpg-h span { display: block; color: #FF4A1C; }
+.smpg-lead { margin: 0; max-width: 42em; font-size: 18px; line-height: 1.6; color: #EDEDED; }
+.smpg code { font: 0.9em 'Space Mono', monospace; background: #222; padding: 1px 5px; }
+
+.smpg-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 16px; margin-top: 12px; }
+.smpg-card { display: flex; flex-direction: column; gap: 14px; padding: 24px; min-height: 210px; text-decoration: none; border-radius: 14px; transition: transform 0.2s cubic-bezier(.2,.7,.2,1), box-shadow 0.2s; box-sizing: border-box; }
+.smpg-card:hover { transform: translateY(-4px); }
+.smpg-brand { display: flex; align-items: center; gap: 12px; }
+.smpg-name { display: flex; flex-direction: column; gap: 5px; min-width: 0; }
+.smpg-brand b { font-size: 30px; line-height: 1; }
+.smpg-brand em { font-style: normal; font-size: 12px; line-height: 1.2; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.7; }
+.smpg-p { font-size: 16px; line-height: 1.45; }
+.smpg-open { margin-top: auto; padding-top: 8px; font-size: 13px; font-weight: 600; letter-spacing: 0.04em; }
+
+.page-dark a.smpg-card.b-kestrel, .smpg-card.b-kestrel { background: #F6F4EE; color: #1D2622; font-family: 'Inter', 'Public Sans', sans-serif; }
+.b-kestrel .smpg-brand b { font-family: 'Fraunces', Georgia, serif; color: #1E5B47; }
+.b-kestrel .smpg-open { color: #1E5B47; }
+.b-kestrel:hover { box-shadow: 0 16px 40px rgba(30,91,71,0.35); }
+
+.page-dark a.smpg-card.b-relay, .smpg-card.b-relay { background: #121419; color: #E4E7EE; border: 1px solid #242833; font-family: 'IBM Plex Sans', 'Public Sans', sans-serif; }
+.b-relay .smpg-brand b { font-weight: 600; }
+.b-relay .smpg-open { color: #C8F25A; font-family: 'Space Mono', monospace; }
+.b-relay:hover { box-shadow: 0 16px 40px rgba(200,242,90,0.18); }
+
+.page-dark a.smpg-card.b-folio, .smpg-card.b-folio { background: #F3EEE3; color: #2B2620; font-family: 'Newsreader', Georgia, serif; }
+.b-folio .smpg-brand b { font-style: italic; font-weight: 600; color: #8A2D1C; font-size: 34px; }
+.b-folio .smpg-p { font-size: 17px; }
+.b-folio .smpg-open { color: #8A2D1C; font-style: italic; font-size: 15px; }
+.b-folio:hover { box-shadow: 0 16px 40px rgba(138,45,28,0.3); }
+
+.page-dark a.smpg-card.b-tally, .smpg-card.b-tally { background: linear-gradient(160deg, #3A2FA0 0%, #221A6B 70%); color: #FFFFFF; font-family: 'Manrope', 'Public Sans', sans-serif; }
+.b-tally .smpg-brand b { font-weight: 800; letter-spacing: -0.02em; }
+.b-tally .smpg-open { color: #FF6B5B; }
+.b-tally:hover { box-shadow: 0 16px 40px rgba(255,107,91,0.3); }
+
+.page-dark a.smpg-card.b-lintel, .smpg-card.b-lintel { background-color: #FFFFFF; background-image: linear-gradient(#E3EAFB 1px, transparent 1px), linear-gradient(90deg, #E3EAFB 1px, transparent 1px); background-size: 20px 20px; color: #0F1A33; border-top: 4px solid #1D4ED8; font-family: 'Space Grotesk', 'Public Sans', sans-serif; }
+.b-lintel .smpg-brand b { color: #1D4ED8; font-weight: 700; }
+.b-lintel .smpg-open { color: #1D4ED8; font-family: 'Space Mono', monospace; }
+.b-lintel:hover { box-shadow: 0 16px 40px rgba(29,78,216,0.3); }
+
+.page-dark a.smpg-card.b-parlance, .smpg-card.b-parlance { background: linear-gradient(135deg, #EFEAFF 0%, #FFF0E5 100%); color: #1A1033; border-radius: 28px; font-family: 'Bricolage Grotesque', 'Public Sans', sans-serif; }
+.b-parlance .smpg-brand b { font-weight: 800; letter-spacing: -0.03em; color: #5B2EFF; }
+.b-parlance .smpg-open { color: #5B2EFF; }
+.b-parlance:hover { box-shadow: 0 16px 40px rgba(91,46,255,0.3); }
+
+.page-dark a.smpg-card.b-quarry, .smpg-card.b-quarry { background-color: #EEF2F5; background-image: radial-gradient(#D3DCE4 1px, transparent 1px); background-size: 14px 14px; color: #0F1B2A; font-family: 'Sora', 'Public Sans', sans-serif; }
+.b-quarry .smpg-brand b { font-weight: 700; letter-spacing: -0.02em; }
+.b-quarry .smpg-brand em { color: #0E7490; opacity: 1; }
+.b-quarry .smpg-open { color: #0E7490; }
+.b-quarry:hover { box-shadow: 0 16px 40px rgba(14,116,144,0.32); }
+
+.page-dark a.smpg-card.b-shortlist, .smpg-card.b-shortlist { background: #FAFAF7; color: #111111; border: 2px solid #111111; border-radius: 0; box-shadow: 6px 6px 0 #FFE14D; font-family: 'Archivo', 'Public Sans', sans-serif; }
+.b-shortlist .smpg-brand b { font-weight: 900; font-stretch: 125%; }
+.b-shortlist .smpg-brand em { opacity: 1; background: #FFE14D; align-self: flex-start; padding: 1px 5px; }
+.b-shortlist .smpg-open { color: #111111; text-decoration: underline; text-decoration-color: #FFE14D; text-decoration-thickness: 4px; }
+.b-shortlist:hover { box-shadow: 8px 8px 0 #FFE14D; }
+
+.smpg-foot { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-top: 12px; }
+.smpg-foot p { margin: 0 12px 0 0; color: #D6D6D6; }
+.smpg-btn, .page-dark a.smpg-btn { display: inline-flex; align-items: center; height: 44px; padding: 0 16px; border: 1px solid #FFFFFF; color: #FFFFFF; font: 700 13px 'Public Sans', sans-serif; text-decoration: none; }
+.page-dark a.smpg-btn:hover { border-color: #FF4A1C; color: #FF4A1C; }
+@media (max-width: 560px) { .smpg { padding: 110px 16px 56px; } .smpg-card { min-height: 0; } }
+@media (prefers-reduced-motion: reduce) { .smpg-card { transition: none; } .smpg-card:hover { transform: none; } }
